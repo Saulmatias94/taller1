@@ -1,14 +1,202 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Landing Page</title>
+    <!--BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
 
 </head>
+
 <body>
-    
+    <!--Navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/soccer-ball.svg" alt="icono " style="width: 15%">Futbol Club
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cabecera">Curso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#suscripciones">Detalles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comentarios">Comentario</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <!--Cabecera-->
+    <header class="main-header" id="cabecera">
+        <div class="background-overlay text-black py-5">
+            <div class="container">
+                <div class="row d-flex h-100">
+                    <div class="col-sm-6 text-center justify-content-center align-self-center my-auto">
+                        <h1>
+                            ¿Quieres acceder a una oferta formativa diferencial con los mejores cursos de entrenador de
+                            fútbol?
+                        </h1>
+
+                        <a href="#" class="btn btn-primary btn-lg">
+                            Leer Mas
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="images/imagenCabecera.jpg" alt="imagen cabecera" class="py-3 " style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Suscripcion-->
+    <section id="suscripciones" class="bg-dark text-white py-5">
+        <div class="container">
+            <h4 class="text-center">Accede a decuento en un curso.</h4>
+            <div class="row">
+                <div class="col-md-4 py-3">
+                    <input type="text" class="form-control form-control-lg" placeholder="Ingresa Nombre">
+                </div>
+                <div class="col-md-4 py-3">
+                    <input type="email" class="form-control form-control-lg" placeholder="Ingresa Correo">
+                </div>
+                <div class="col-md-4 py-3">
+                    <button class="btn btn-primary btn-lg btn-block">
+                        Suscribirse
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Descripcion-->
+    <section class="py-5 " id="descripcion">
+        <div class="container">
+            <div class="accordion text-center" id="accordionExample">
+                <h2>Detalles</h2>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                ¿Qué hay que estudiar para ser entrenador de fútbol?
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Curso de Técnico Deportivo en Fútbol nivel 1 con el que podrás entrenar hasta categoría
+                            juvenil. Consigue tu título de entrenador equivalente a UEFA B.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Cómo conseguir el título de entrenador de fútbol?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Desarrolla modelos de juego y metodologías que te harán conseguir el éxito deportivo.
+                            ¡Inscribete! El 100% de profesores trabajan en clubes de fútbol profesional a nivel europeo.
+                            Online y Presencial. Apúntate a nuestros cursos de entrenador de fútbol, todos los niveles,
+                            nivel 1, nivel 2 y nivel 3.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--Comentarios-->
+    <section id="comentarios" class="bg-dark text-white py-5">
+        <div class="container">
+            <form>
+                <h3 class="text-center">Deja un comentario.</h3>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre Autor:</label>
+                    <input type="text" class="form-control" id="nombreAutor" onkeyup="countChars(this, 3);">
+                    <small id="charNum" class="form-text">0 de 3 caracteres minimos.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Fecha Publicación:</label>
+                    <input type="date" class="form-control" id="datee">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Comentario:</label>
+                    <textarea class="form-control" id="coments" placeholder="Digite comentario"
+                        onkeyup="countChars(this, 200);"></textarea>
+                    <small id="charNum2" class="form-text">0 de 200 caracteres maximo.</small>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="addAlert('primary')">Publicar</button>
+                <h4 class="text-center">Ultimos comentarios</h4>
+                <div class="container form-group bg-light p-3 mt-3">
+                    <div id="alerts"></div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row text-center text-black">
+                <div class="col py-3  ">
+                    <p>Saul Cifuentes Oyarzo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!--script-->
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+
 </body>
+
 </html>
