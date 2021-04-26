@@ -1,7 +1,7 @@
 const arrayAlerts = [];
-const arrayName= [];
-const arrayFecha= [];
-const arrayComentario= [];
+const arrayName = [];
+const arrayFecha = [];
+const arrayComentario = [];
 const alerts = document.getElementById("alerts");
 var names = document.getElementById("nombreAutor");
 var datee = document.getElementById("datee");
@@ -20,16 +20,22 @@ function drawAlerts(a, b, c) {
 
 
 }
-const addAlert = (type, x=0) => {
+const addAlert = (type) => {
     
-    arrayAlerts.unshift(type);
+
+    
     var a = names.value;
     var b = coments.value;
     var c = datee.value;
+    if ((a == "") || (b == "") || (c == "")) {  //COMPRUEBA CAMPOS VACIOS
+        document.getElementById("char").innerHTML = '<span style="color: red;">Campos vacios</span>';
+    }else{
+        arrayAlerts.unshift(type);
+        drawAlerts(a, b, c);
+    }
+
     
-    
-    drawAlerts(a, b, c);
-   
+
 }
 
 function deleteAlert() {
